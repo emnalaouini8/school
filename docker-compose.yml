@@ -27,12 +27,12 @@ services:
     stdin_open: true
     tty: true
     
-    app-school-frontend:
-        image: emnaaouini/student-front:1.0.1
-        restart: on-failure
-        ports:
-        -"8585:85"
-        depends_on:
-        - app-backend
+   app-school-frontend:
+    image: emnaaouini/student-front:1.0.1
+    restart: on-failure
+    ports:
+      - 8585:85
+    depends_on:
+      - app-backend
 volumes:
   db :
